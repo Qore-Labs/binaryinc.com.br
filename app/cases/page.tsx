@@ -1,3 +1,13 @@
+import { SITE_CONFIG } from "@/src/utils/config/site";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cases",
+  appleWebApp: {
+    title: `Cases | ${SITE_CONFIG.name}`,
+  },
+};
+
 export default function Cases() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-zinc-900">
