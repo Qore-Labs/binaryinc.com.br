@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Container from "../UI/Container";
-import { Icons } from "../UI/Icons";
-import Menu from "./Menu";
+
+import Container from "@/components/UI/Container";
+import Menu from "@/components/Header/Menu";
+import { Icons } from "@/components/UI/Icons";
 
 const Header = () => {
   return (

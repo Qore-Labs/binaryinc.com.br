@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { MenuItems } from "@/src/utils/config/site";
+import { MenuItems } from "@/utils/config/site";
 
 export default function Menu() {
   return (

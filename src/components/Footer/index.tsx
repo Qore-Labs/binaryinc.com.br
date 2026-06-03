@@ -1,7 +1,11 @@
 import Link from "next/link";
-import Container from "../UI/Container";
-import { Icons } from "../UI/Icons";
-import { MenuItems, SITE_CONFIG } from "@/src/utils/config/site";
+
+import Container from "@/components/UI/Container";
+import { Icons } from "@/components/UI/Icons";
+
+import { MenuItems, SITE_CONFIG } from "@/utils/config/site";
+
+import { ISocialMedia } from "@/types/config";
 
 const Footer = () => {
   return (
@@ -42,7 +46,7 @@ const Footer = () => {
         </section>
 
         <section className="w-full flex items-center-safe justify-end gap-6">
-          {SITE_CONFIG.socialMedia?.map((social) => {
+          {SITE_CONFIG.socialMedia?.map((social: ISocialMedia) => {
             const Icon = Icons.Social[social.name as keyof typeof Icons.Social];
             if (!Icon) return null;
 

@@ -1,4 +1,4 @@
-import { IIcons } from "@/src/types/icons";
+import { IIcons } from "@/types/icons";
 
 const Logo = ({
   width,
