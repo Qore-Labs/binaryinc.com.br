@@ -1,9 +1,12 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
-import "./globals.css";
-import { SITE_CONFIG } from "@/src/utils/config/site";
-import Header from "@/src/components/Header";
-import Footer from "@/src/components/Footer";
+
+import { SITE_CONFIG } from "@/utils/config/site";
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter-sans",
