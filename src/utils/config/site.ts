@@ -1,4 +1,4 @@
-import { ISiteConfig } from "@/src/types/config";
+import { IMenuItems, ISiteConfig } from "@/src/types/config";
 
 export const SITE_CONFIG: ISiteConfig = {
     name: "BinaryInc",
@@ -15,4 +15,14 @@ export const SITE_CONFIG: ISiteConfig = {
         "aplicativos mobile",
         "BinaryInc",
     ],
+    socialMedia: [
+        { name: "Instagram", url: "https://www.instagram.com/binaryinc.tech/" },
+        { name: "LinkedIn", url: "https://www.linkedin.com/company/binaryinc/" }
+    ]
 }
+
+export const MenuItems: IMenuItems[] = [
+    { name: "Home", href: "/" },
+    { name: "Quem somos", href: "/about" },
+    { name: "Cases", href: "/cases" },
+];
