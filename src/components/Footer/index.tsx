@@ -12,7 +12,12 @@ const Footer = () => {
             className="flex items-center-safe justify-start"
             title="BinaryInc | Tencnologia que Conecta."
           >
-            <Icons.Logo width={113} height={32} alternative />
+            <Icons.Logo
+              width={113}
+              height={32}
+              alternative
+              aria-hidden="true"
+            />
             <span className="text-white text-base mx-3">|</span>
             <figcaption className="text-white text-base">
               Tecnologia que Conecta.
@@ -26,6 +31,7 @@ const Footer = () => {
                   <Link
                     href={{ pathname: item.href }}
                     className="text-white text-base hover:text-(--green) transition-colors"
+                    aria-label={`Acesse - ${item.name}`}
                   >
                     {item.name}
                   </Link>
@@ -46,10 +52,10 @@ const Footer = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={social.name}
+                aria-label={`Acesse nosso ${social.name}`}
                 title={social.name}
               >
-                <Icon width={18} height={18} />
+                <Icon width={18} height={18} aria-hidden="true" />
               </a>
             );
           })}

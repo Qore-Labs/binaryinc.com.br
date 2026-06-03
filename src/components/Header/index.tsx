@@ -8,7 +8,7 @@ const Header = () => {
     <header className="w-full h-20 flex items-center justify-center bg-zinc-50 drop-shadow-sm">
       <Container className="flex items-center justify-between">
         <picture about="BinaryInc" className="relative">
-          <Icons.Logo width={119} height={35} />
+          <Icons.Logo width={119} height={35} aria-hidden="true" />
           <h1 className="opacity-0 absolute pointer-events-none top-0 left-0">
             BinaryInc
           </h1>
