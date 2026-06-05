@@ -16,8 +16,14 @@
   --black: #282828;
   --gray: #5F5F5F;
   --gray-02: #ACACAC;
+  --gray-03: #F4F7FA;
+  --blue: #473BF0;
   --dark-blue: #12053C;
+  --dark-blue-02: #161546;
+  --dark-blue-02: #161C2D;
   --footer: #151419;
+
+  --text-3xl: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {

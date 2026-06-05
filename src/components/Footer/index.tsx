@@ -74,7 +74,7 @@ const Footer = () => {
             direitos reservados.
           </p>
 
-          <p className="text-center text-white text-xs flex items-center gap-2">
+          <p className="text-center text-(--gray-02) text-xs flex items-center gap-2">
             <Icons.LGPDShield width={13} height={16} />
             Conformidade LGPD/GDPR
           </p>

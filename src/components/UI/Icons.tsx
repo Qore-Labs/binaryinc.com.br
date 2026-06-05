@@ -101,7 +101,27 @@ const LGPDShield = ({ width, height }: IIcons) => {
     >
       <path
         d="M5.792 11.292L10.5 6.583 9.312 5.396l-3.52 3.52-1.75-1.75-1.188 1.188 2.938 2.938zm.875 5.375c-1.93-.486-3.525-1.594-4.782-3.323C.628 11.614 0 9.694 0 7.584V2.5L6.667 0l6.666 2.5v5.083c0 2.111-.628 4.032-1.885 5.76-1.257 1.73-2.85 2.838-4.781 3.324zm0-1.75c1.444-.459 2.639-1.375 3.583-2.75a7.915 7.915 0 001.417-4.584V3.646l-5-1.875-5 1.875v3.937c0 1.68.472 3.209 1.416 4.584.945 1.375 2.14 2.291 3.584 2.75z"
-        fill="#fff"
+        fill="#ACACAC"
+      />
+    </svg>
+  );
+};
+
+const ArrowRight = ({ width, height }: IIcons) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 13 14"
+      fill="none"
+    >
+      <path
+        d="M7.4 1.413l5.6 5.2-5.6 5.2M1 6.399h11.2"
+        stroke="#473BF0"
+        strokeWidth={2}
+        strokeLinecap="square"
+        strokeLinejoin="bevel"
       />
     </svg>
   );
@@ -110,6 +130,7 @@ const LGPDShield = ({ width, height }: IIcons) => {
 export const Icons = {
   Logo,
   LGPDShield,
+  ArrowRight,
   Social: {
     Instagram,
     LinkedIn,
