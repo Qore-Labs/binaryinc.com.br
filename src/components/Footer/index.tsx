@@ -10,7 +10,7 @@ import { ISocialMedia } from "@/types/config";
 const Footer = () => {
   return (
     <footer className="w-full py-5 bg-(--footer)">
-      <Container>
+      <Container className="max-lg:px-3.5">
         <section className="w-full h-full flex items-center justify-between mb-9 max-lg:flex-col max-lg:gap-4">
           <figure
             className="flex items-center-safe justify-start"
@@ -65,7 +65,7 @@ const Footer = () => {
           })}
         </section>
       </Container>
-      <Container>
+      <Container className="max-lg:px-3.5">
         <span className="w-full h-px bg-(--gray-02) block my-5"></span>
 
         <section className="w-full flex items-center-safe justify-between max-lg:flex-col max-lg:gap-2">
