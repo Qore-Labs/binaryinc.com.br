@@ -127,10 +127,27 @@ const ArrowRight = ({ width, height }: IIcons) => {
   );
 };
 
+function Menu(props: IIcons) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={props.width}
+      height={props.height}
+      viewBox="0 0 26 23"
+      fill="none"
+    >
+      <rect width={props.width} height={4} rx={2.5} fill={"#282828"} />
+      <rect y={9} width={props.width} height={4} rx={2.5} fill={"#282828"} />
+      <rect y={18} width={props.width} height={4} rx={2.5} fill={"#282828"} />
+    </svg>
+  );
+}
+
 export const Icons = {
   Logo,
   LGPDShield,
   ArrowRight,
+  Menu,
   Social: {
     Instagram,
     LinkedIn,

@@ -7,33 +7,36 @@ import { CardsContent } from "@/utils/contents/cards";
 import { Card } from "@/components/Card";
 import { ContactForm } from "@/components/ContactForm";
 import { HeroContactForm } from "@/components/ContactForm/HeroContactForm";
+import { ValidateDevice } from "@/utils/device/is-mobile";
 
-export default function Home() {
+export default async function Home() {
+  const isMobile = await ValidateDevice();
+
   return (
     <main className="w-full">
-      <section className="mt-6 mb-12 bg-[url('/home/bg-hero-bitmap.png')]">
-        <Container className="px-32 flex items-center justify-between gap-20">
+      <section className="mt-6 mb-20 bg-[url('/home/bg-hero-bitmap.png')]">
+        <Container className="px-32 flex items-center justify-between gap-20 max-lg:flex-col-reverse max-lg:gap-4 max-lg:px-10">
           <Hero />
 
-          <section className="w-full mt-24 flex flex-col items-start justify-center">
+          <section className="w-full mt-24 flex flex-col items-start justify-center max-lg:mt-0">
             <h2 className="text-3xl font-alt font-semibold text-(--dark-blue) tracking-tight">
-              Tecnologia que traduz <br />{" "}
-              <span className="text-(--green) font-extrabold text-6xl">
+              Tecnologia que traduz {!isMobile && <br />}{" "}
+              <span className="text-(--green) font-extrabold text-6xl max-lg:text-3xl">
                 Grandes Ideias
               </span>{" "}
-              <br /> em{" "}
-              <span className="text-(--green) font-extrabold text-6xl">
+              {!isMobile && <br />} em{" "}
+              <span className="text-(--green) font-extrabold text-6xl max-lg:text-3xl">
                 Impacto Real.
               </span>
             </h2>
             <p className="text-lg text-(--gray) mt-4 mb-9 text-start">
-              Aqui unimos a tecnologia a sensibilidade humana <br /> para
-              construir soluções que simplificam o agora e <br /> antecipam o
-              futuro
+              Aqui unimos a tecnologia a sensibilidade humana{" "}
+              {!isMobile && <br />} para construir soluções que simplificam o
+              agora e {!isMobile && <br />} antecipam o futuro
             </p>
             <Link
               href={{ hash: "contato" }}
-              className="bg-(--dark-blue-02) ml-8 hover:bg-(--dark-blue) transition-color text-white text-sm font-semibold w-91 h-12 rounded-full flex items-center justify-center transition-all"
+              className="bg-(--dark-blue-02) ml-8 hover:bg-(--dark-blue) transition-color text-white text-sm font-semibold w-91 h-12 rounded-full flex items-center justify-center transition-all max-lg:ml-0 max-lg:w-full"
             >
               Vamos construir algo JUNTOS!
             </Link>
@@ -42,24 +45,25 @@ export default function Home() {
       </section>
 
       <section className="w-full relative mb-20">
-        <Container className="px-14">
-          <div className="w-full flex items-center-safe justify-between h-101.25 bg-linear-270 from-(--dark-blue) to-[#3634AC] rounded-2xl px-14 py-8">
+        <Container className="px-14 max-lg:px-4">
+          <div className="w-full flex items-center-safe justify-between h-101.25 max-lg:h-auto bg-linear-270 from-(--dark-blue) to-[#3634AC] rounded-2xl px-14 py-8 max-lg:px-8 max-lg:flex-col max-lg:gap-8">
             <section className="flex flex-col items-start justify-start gap-5">
-              <h3 className="font-alt text-3xl text-(--green) tracking-tight">
+              <h3 className="font-alt text-3xl text-(--green) tracking-tight max-lg:text-2xl">
                 Sobre Nós | A Essência
               </h3>
-              <h2 className="font-alt text-5xl font-extrabold text-white leading-16">
-                Mais que software, <br />
+              <h2 className="font-alt text-5xl font-extrabold text-white leading-16 max-lg:text-4xl max-lg:leading-10">
+                Mais que software, {!isMobile && <br />}
                 Criamos Pontes
               </h2>
               <p className="text-white text-start">
-                Acreditamos que a inovação só faz sentido quando serve às <br />
+                Acreditamos que a inovação só faz sentido quando serve às{" "}
+                {!isMobile && <br />}
                 pessoas. A <strong>BinaryInc</strong> nasceu para ser a parceira
-                estratégica de <br />
+                estratégica de {!isMobile && <br />}
                 quem não aceita o comum. Somos arquitetos de possibilidades,
-                <br />
+                {!isMobile && <br />}
                 focados em transformar o complexo em liberdade e o potencial{" "}
-                <br />
+                {!isMobile && <br />}
                 ilimitado em valor tangível.
               </p>
             </section>
@@ -67,25 +71,27 @@ export default function Home() {
             <Image
               src={"/home/celular.png"}
               alt="Celular mostrando conquistas do mês"
-              width={386}
-              height={352}
+              width={isMobile ? 286 : 386}
+              height={isMobile ? 261 : 352}
             />
           </div>
         </Container>
       </section>
 
       <section className="bg-linear-180 from-[#E7FDF8] to-transparent pt-20 pb-8">
-        <Container className="flex items-start justify-center gap-14">
+        <Container className="flex items-start justify-center gap-14 max-lg:flex-col">
           <section>
-            <h3 className="text-5xl font-bold tracking-tight leading-14 mb-8 text-(--dark-blue)">
-              Soluções desenhadas <br /> para o seu Ecossistema
+            <h3 className="text-5xl font-bold tracking-tight leading-14 mb-8 text-(--dark-blue) max-lg:text-4xl max-lg:leading-10">
+              Soluções desenhadas {!isMobile && <br />} para o seu Ecossistema
             </h3>
 
             <p className="text-(--gray) text-lg mb-5">
               <strong className="font-semibold">B2B - </strong> Eficiência da IA
-              impulsionando o seu crescimento. <br /> Desenvolvemos ecossistemas
-              robustos que otimizam <br /> processos e potencializam resultados,
-              com a solidez e a <br /> transparência que o mercado exige
+              impulsionando o seu crescimento. {!isMobile && <br />}{" "}
+              Desenvolvemos ecossistemas robustos que otimizam{" "}
+              {!isMobile && <br />} processos e potencializam resultados, com a
+              solidez e a {!isMobile && <br />} transparência que o mercado
+              exige
             </p>
 
             <Image
@@ -97,7 +103,7 @@ export default function Home() {
             />
           </section>
 
-          <section>
+          <section className="max-lg:flex max-lg:flex-col-reverse">
             <Image
               src={"/home/B2C.jpg"}
               alt="B2C"
@@ -108,9 +114,9 @@ export default function Home() {
 
             <p className="text-(--gray) text-lg mt-5">
               <strong>B2C - </strong> Experiências que facilitam a vida. Criamos
-              interfaces <br /> intuitivas que eliminam o ruído, permitindo que
-              a <br /> tecnologia seja uma aliada silenciosa e poderosa no seu{" "}
-              <br /> dia a dia
+              interfaces {!isMobile && <br />} intuitivas que eliminam o ruído,
+              permitindo que a {!isMobile && <br />} tecnologia seja uma aliada
+              silenciosa e poderosa no seu {!isMobile && <br />} dia a dia
             </p>
           </section>
         </Container>
@@ -123,7 +129,7 @@ export default function Home() {
           </h3>
           <h4 className="text-xl text-(--gray)">Por que a BinaryInc?</h4>
 
-          <section className="mt-9 flex items-start justify-center gap-7 w-full">
+          <section className="mt-9 flex items-start justify-center gap-7 w-full max-lg:flex-col">
             {CardsContent.map((card) => (
               <Card.Root key={card.title}>
                 <Card.Title>{card.title}</Card.Title>
@@ -139,13 +145,13 @@ export default function Home() {
       </section>
 
       <section className="py-9">
-        <Container>
-          <div className="w-full flex items-center-safe justify-between h-116.25 bg-linear-270 from-(--dark-blue) to-[#3634AC] rounded-2xl">
-            <section className="flex flex-col items-center-safe justify-center pl-24">
-              <h3 className="font-alt text-3xl text-white font-bold mb-4">
+        <Container className="max-lg:px-4">
+          <div className="w-full flex items-center-safe justify-between h-116.25 bg-linear-270 from-(--dark-blue) to-[#3634AC] rounded-2xl max-lg:h-auto max-lg:flex-col">
+            <section className="flex flex-col items-center-safe justify-center pl-24 max-lg:p-6">
+              <h3 className="font-alt text-3xl text-white font-bold mb-4 max-lg:text-2xl">
                 Pronto para transformar sua operação?
               </h3>
-              <h4 className="text-(--green) text-lg mb-16">
+              <h4 className="text-(--green) text-lg mb-16 max-lg:mb-10">
                 Junte-se às empresas que já otimizaram seus processos com a{" "}
                 <strong className="font-semibold">BinaryInc.</strong>
               </h4>

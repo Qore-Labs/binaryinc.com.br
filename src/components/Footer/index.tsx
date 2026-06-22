@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="w-full py-5 bg-(--footer)">
       <Container>
-        <section className="w-full h-full flex items-center justify-between mb-9">
+        <section className="w-full h-full flex items-center justify-between mb-9 max-lg:flex-col max-lg:gap-4">
           <figure
             className="flex items-center-safe justify-start"
             title="BinaryInc | Tencnologia que Conecta."
@@ -68,8 +68,8 @@ const Footer = () => {
       <Container>
         <span className="w-full h-px bg-(--gray-02) block my-5"></span>
 
-        <section className="w-full flex items-center-safe justify-between">
-          <p className="text-center text-white text-base">
+        <section className="w-full flex items-center-safe justify-between max-lg:flex-col max-lg:gap-2">
+          <p className="text-center text-white text-base max-lg:text-sm">
             &copy; {new Date().getFullYear()} - {SITE_CONFIG.name}. Todos os
             direitos reservados.
           </p>

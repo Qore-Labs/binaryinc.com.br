@@ -24,6 +24,8 @@
   --footer: #151419;
 
   --text-3xl: 2rem;
+
+  --max-xs: 390px;
 }
 
 @media (prefers-color-scheme: dark) {
