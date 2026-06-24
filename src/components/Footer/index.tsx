@@ -1,9 +1,7 @@
-import Link from "next/link";
-
 import Container from "@/components/UI/Container";
 import { Icons } from "@/components/UI/Icons";
 
-import { MenuItems, SITE_CONFIG } from "@/utils/config/site";
+import { SITE_CONFIG } from "@/utils/config/site";
 
 import { ISocialMedia } from "@/types/config";
 
@@ -28,7 +26,7 @@ const Footer = () => {
             </figcaption>
           </figure>
 
-          <nav className="flex items-center-safe justify-end">
+          {/* <nav className="flex items-center-safe justify-end">
             <ul className="flex gap-8 items-center-safe">
               {MenuItems.map((item) => (
                 <li key={item.href}>
@@ -42,7 +40,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </nav>
+          </nav> */}
         </section>
 
         <section className="w-full flex items-center-safe justify-end gap-6">

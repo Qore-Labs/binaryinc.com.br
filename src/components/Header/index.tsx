@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 import Container from "@/components/UI/Container";
-import Menu from "@/components/Header/Menu";
+// import Menu from "@/components/Header/Menu";
 import { Icons } from "@/components/UI/Icons";
-import { ValidateDevice } from "@/utils/device/is-mobile";
+// import { ValidateDevice } from "@/utils/device/is-mobile";
 
 const Header = async () => {
-  const isMobile = await ValidateDevice();
+  // const isMobile = await ValidateDevice();
 
   return (
     <header className="w-full h-20 flex items-center justify-center bg-zinc-50 drop-shadow-sm">
