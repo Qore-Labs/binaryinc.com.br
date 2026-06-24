@@ -1,13 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 
-import Hero from "@/components/Hero";
 import Container from "@/components/UI/Container";
 import { CardsContent } from "@/utils/contents/cards";
 import { Card } from "@/components/Card";
 import { ContactForm } from "@/components/ContactForm";
-import { HeroContactForm } from "@/components/ContactForm/HeroContactForm";
 import { ValidateDevice } from "@/utils/device/is-mobile";
+import HeroArt from "@/components/Hero";
+import AboutUsSection from "@/components/Animated/AboutUsSection";
+import AnimatedImage from "@/components/Animated/AnimatedImage";
+import HeroContactFormAnimated from "@/components/ContactForm/HeroContactForm";
 
 export default async function Home() {
   const isMobile = await ValidateDevice();
@@ -16,7 +17,7 @@ export default async function Home() {
     <main className="w-full">
       <section className="mt-6 mb-20 bg-[url('/home/bg-hero-bitmap.png')]">
         <Container className="px-32 flex items-center justify-between gap-20 max-lg:flex-col-reverse max-lg:gap-4 max-lg:px-10">
-          <Hero />
+          <HeroArt isMobile={isMobile} />
 
           <section className="w-full mt-24 flex flex-col items-start justify-center max-lg:mt-0">
             <h2 className="text-3xl font-alt font-semibold text-(--dark-blue) tracking-tight">
@@ -44,39 +45,7 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section className="w-full relative mb-20">
-        <Container className="px-14 max-lg:px-4">
-          <div className="w-full flex items-center-safe justify-between h-101.25 max-lg:h-auto bg-linear-270 from-(--dark-blue) to-[#3634AC] rounded-2xl px-14 py-8 max-lg:px-8 max-lg:flex-col max-lg:gap-8">
-            <section className="flex flex-col items-start justify-start gap-5">
-              <h3 className="font-alt text-3xl text-(--green) tracking-tight max-lg:text-2xl">
-                Sobre Nós | A Essência
-              </h3>
-              <h2 className="font-alt text-5xl font-extrabold text-white leading-16 max-lg:text-4xl max-lg:leading-10">
-                Mais que software, {!isMobile && <br />}
-                Criamos Pontes
-              </h2>
-              <p className="text-white text-start">
-                Acreditamos que a inovação só faz sentido quando serve às{" "}
-                {!isMobile && <br />}
-                pessoas. A <strong>BinaryInc</strong> nasceu para ser a parceira
-                estratégica de {!isMobile && <br />}
-                quem não aceita o comum. Somos arquitetos de possibilidades,
-                {!isMobile && <br />}
-                focados em transformar o complexo em liberdade e o potencial{" "}
-                {!isMobile && <br />}
-                ilimitado em valor tangível.
-              </p>
-            </section>
-
-            <Image
-              src={"/home/celular.png"}
-              alt="Celular mostrando conquistas do mês"
-              width={isMobile ? 286 : 386}
-              height={isMobile ? 261 : 352}
-            />
-          </div>
-        </Container>
-      </section>
+      <AboutUsSection isMobile={isMobile} />
 
       <section className="bg-linear-180 from-[#E7FDF8] to-transparent pt-20 pb-8">
         <Container className="flex items-start justify-center gap-14 max-lg:flex-col">
@@ -94,7 +63,7 @@ export default async function Home() {
               exige
             </p>
 
-            <Image
+            <AnimatedImage
               src={"/home/B2B.jpg"}
               alt="B2B"
               className="rounded"
@@ -104,7 +73,7 @@ export default async function Home() {
           </section>
 
           <section className="max-lg:flex max-lg:flex-col-reverse">
-            <Image
+            <AnimatedImage
               src={"/home/B2C.jpg"}
               alt="B2C"
               className="rounded mt-5"
@@ -144,7 +113,7 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section className="py-9">
+      <section className="py-9" id="contato">
         <Container className="max-lg:px-4">
           <div className="w-full flex items-center-safe justify-between h-116.25 bg-linear-270 from-(--dark-blue) to-[#3634AC] rounded-2xl max-lg:h-auto max-lg:flex-col">
             <section className="flex flex-col items-center-safe justify-center pl-24 max-lg:p-6">
@@ -156,12 +125,12 @@ export default async function Home() {
                 <strong className="font-semibold">BinaryInc.</strong>
               </h4>
               <ContactForm />
-              <span className="text-white/70 mt-4 text-sm">
+              <span className="text-white/70 mt-4 text-sm max-lg:text-center max-lg:text-xs">
                 Sem spam • Nosso time de vendas entrará em contato!
               </span>
             </section>
 
-            <HeroContactForm />
+            <HeroContactFormAnimated />
           </div>
         </Container>
       </section>

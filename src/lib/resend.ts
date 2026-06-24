@@ -1,8 +1,16 @@
+"use server";
+
 import { Resend } from "resend";
 
 export async function SendContactEmails(email: string) {
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      throw new Error("RESEND_API_KEY is not configured");
+    }
+
+    const resend = new Resend(apiKey);
 
     // Email para a equipe BinaryInc
     const teamEmailHtml = `
@@ -51,7 +59,7 @@ export async function SendContactEmails(email: string) {
         }
         .email-label {
             font-size: 12px;
-            color: #00d97f;
+            color: #00d97f !important;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -59,14 +67,14 @@ export async function SendContactEmails(email: string) {
         }
         .email-text {
             font-size: 18px;
-            color: #1a1f7f;
+            color: #1a1f7f !important;
             font-weight: 600;
             word-break: break-all;
         }
         .action-button {
             display: inline-block;
             background: #00d97f;
-            color: white;
+            color: white !important;
             padding: 12px 30px;
             border-radius: 6px;
             text-decoration: none;
@@ -87,7 +95,7 @@ export async function SendContactEmails(email: string) {
 <body>
     <div class="container">
         <div class="header">
-            <h1>🚀 Novo Contato</h1>
+            <h1>Novo Contato!</h1>
         </div>
         <div class="content">
             <p style="color: #333; font-size: 16px; margin: 0 0 20px 0;">
@@ -100,7 +108,7 @@ export async function SendContactEmails(email: string) {
             <a href="mailto:${email}" class="action-button">Responder</a>
         </div>
         <div class="footer">
-            <p style="margin: 0;">BinaryInc © ${new Date().getFullYear()}/p>
+            <p style="margin: 0;">BinaryInc &copy; ${new Date().getFullYear()}</p>
         </div>
     </div>
 </body>
@@ -217,9 +225,16 @@ export async function SendContactEmails(email: string) {
       }),
     ]);
 
-    return { success: true };
+    return { success: true, error: null };
   } catch (error) {
     console.error("Erro ao enviar e-mails:", error);
-    return { success: false, error };
+
+    return {
+      success: false,
+      error:
+        error instanceof Error
+          ? error.message
+          : "Erro desconhecido ao enviar e-mails",
+    };
   }
 }
