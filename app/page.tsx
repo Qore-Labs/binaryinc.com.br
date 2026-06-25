@@ -16,7 +16,7 @@ export default async function Home() {
   return (
     <main className="w-full">
       <section className="mt-6 mb-20 bg-[url('/home/bg-hero-bitmap.png')]">
-        <Container className="px-32 flex items-center justify-between gap-20 max-lg:flex-col-reverse max-lg:gap-4 max-lg:px-10">
+        <Container className="px-32 flex items-center justify-between gap-20 max-lg:flex-col max-lg:gap-4 max-lg:px-10">
           <HeroArt isMobile={isMobile} />
 
           <section className="w-full mt-24 flex flex-col items-start justify-center max-lg:mt-0">
