@@ -72,7 +72,8 @@ export default function HeroArt({ isMobile }: HeroArtProps) {
         alt="Retângulo de fundo da hero art"
         width={isMobile ? 350 : 435}
         height={isMobile ? 350 : 435}
-        priority
+        loading="eager"
+        fetchPriority="high"
         className="absolute bottom-0 left-0 shrink-0"
       />
 
@@ -82,7 +83,8 @@ export default function HeroArt({ isMobile }: HeroArtProps) {
         alt="Um homem sorrindo para o celular"
         width={isMobile ? 350 : 399}
         height={isMobile ? 466 : 531}
-        priority
+        loading="eager"
+        fetchPriority="high"
         className="relative bottom-0 -right-9"
       />
 
@@ -92,7 +94,7 @@ export default function HeroArt({ isMobile }: HeroArtProps) {
         alt="Elipse da hero art"
         width={105}
         height={105}
-        priority
+        loading="eager"
         className="absolute bottom-4 -right-16 max-lg:-right-8"
       />
     </picture>

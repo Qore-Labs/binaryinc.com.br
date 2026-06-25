@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import Container from "@/components/UI/Container";
 import { CardsContent } from "@/utils/contents/cards";
@@ -15,8 +16,18 @@ export default async function Home() {
 
   return (
     <main className="w-full">
-      <section className="mt-6 mb-20 bg-[url('/home/bg-hero-bitmap.png')]">
-        <Container className="px-32 flex items-center justify-between gap-20 max-lg:flex-col max-lg:gap-4 max-lg:px-10">
+      <section className="relative mt-6 mb-20 overflow-hidden">
+        <Image
+          src="/home/bg-hero-bitmap.png"
+          alt=""
+          fill
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+          className="pointer-events-none z-0 object-cover"
+          aria-hidden="true"
+        />
+        <Container className="relative z-10 px-32 flex items-center justify-between gap-20 max-lg:flex-col max-lg:gap-4 max-lg:px-10">
           <HeroArt isMobile={isMobile} />
 
           <section className="w-full mt-24 flex flex-col items-start justify-center max-lg:mt-0">
