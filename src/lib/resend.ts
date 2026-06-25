@@ -224,7 +224,7 @@ export async function SendContactEmails(email: string) {
         <div class="email-container" style="max-width: 600px; margin: 0 auto;">
             <!-- Header -->
             <div class="header" style="padding: 40px 30px; background: linear-gradient(135deg, #12053c 0%, #1a0f4a 100%); text-align: center;">
-                <div class="logo" style="height: 60px; margin-bottom: 20px;">
+                <div class="logo" style="height: 36px;margin-bottom: 0;">
                     <!--- dark --->
                     <img src="https://www.binaryinc.com.br/emails/logo-binary-dark-theme.png" alt="logo binary dark theme" width="119" height="35" class="dark-logo" />
                 </div>
@@ -235,8 +235,6 @@ export async function SendContactEmails(email: string) {
                 <h1 style="font-size: 28px; font-weight: 600; margin-bottom: 15px; color: #12053c;">Novo contato recebido!</h1>
                 
                 <div class="divider" style="height: 3px; width: 50px; background-color: #03e2ad; margin-bottom: 30px;"></div>
-                
-                <p class="subtitle" style="font-size: 16px; color: #03e2ad; margin-bottom: 30px; font-weight: 500;">Cliente interessado nos nossos serviços</p>
 
                 <div class="message" style="font-size: 16px; line-height: 1.8; margin-bottom: 30px; color: #333333;">
                     <p>Olá time,</p>
@@ -244,7 +242,7 @@ export async function SendContactEmails(email: string) {
                     <p style="margin-top: 30px; font-size: 14px; color: #999999;">
                         <strong style="color: #12053c;">Email do cliente:</strong>
                     </p>
-                    <p style="margin-top: 8px; font-size: 18px; font-weight: 600; color: #03e2ad; word-break: break-all;">
+                    <p style="margin-top: 8px; font-size: 16px; font-weight: 600; color: #03e2ad; word-break: break-all;">
                         ${email}
                     </p>
                 </div>
@@ -518,7 +516,7 @@ export async function SendContactEmails(email: string) {
         <div class="email-container" style="max-width: 600px; margin: 0 auto;">
             <!-- Header -->
             <div class="header" style="padding: 40px 30px; background: linear-gradient(135deg, #12053c 0%, #1a0f4a 100%); text-align: center;">
-                <div class="logo" style="height: 60px; margin-bottom: 20px;">
+                <div class="logo" style="height: 36px;margin-bottom: 0;">
                     <!--- dark --->
                     <img src="https://www.binaryinc.com.br/emails/logo-binary-dark-theme.png" alt="logo binary dark theme" width="119" height="35" class="dark-logo" />
                </div>
@@ -558,10 +556,10 @@ export async function SendContactEmails(email: string) {
 
                 <div class="social-icons" style="margin: 25px 0;">
                     <a href="https://linkedin.com/company/binaryinc" style="display: inline-block;width:40px;height:40px;margin:0 10px;border-radius:50%;background-color:#03e2ad;text-align:center;line-height: 56px;text-decoration:none">
-                        <img src="https://www.binaryinc.com.br/emails/linkedin-icon-white.png" alt="linkedin icon" />
+                        <img src="https://www.binaryinc.com.br/emails/linkedin-icon-white.png" alt="linkedin icon" width="25px" height="25px" />
                     </a>
                     <a href="https://instagram.com/binaryinc" style="display: inline-block;width:40px;height:40px;margin:0 10px;border-radius:50%;background-color:#03e2ad;text-align:center;line-height: 56px;text-decoration:none">
-                        <img src="https://www.binaryinc.com.br/emails/instagram-icon-white.png" alt="instagram icon" />
+                        <img src="https://www.binaryinc.com.br/emails/instagram-icon-white.png" alt="instagram icon" width="25px" height="25px" />
                     </a>
                 </div>
 
