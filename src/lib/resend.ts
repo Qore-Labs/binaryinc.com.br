@@ -224,7 +224,7 @@ export async function SendContactEmails(email: string) {
         <div class="email-container" style="max-width: 600px; margin: 0 auto;">
             <!-- Header -->
             <div class="header" style="padding: 40px 30px; background: linear-gradient(135deg, #12053c 0%, #1a0f4a 100%); text-align: center;">
-                <div class="logo" style="height: 60px; margin-bottom: 20px;">
+                <div class="logo" style="height: 36px;margin-bottom: 0;">
                     <!--- dark --->
                     <img src="https://www.binaryinc.com.br/emails/logo-binary-dark-theme.png" alt="logo binary dark theme" width="119" height="35" class="dark-logo" />
                 </div>
@@ -518,7 +518,7 @@ export async function SendContactEmails(email: string) {
         <div class="email-container" style="max-width: 600px; margin: 0 auto;">
             <!-- Header -->
             <div class="header" style="padding: 40px 30px; background: linear-gradient(135deg, #12053c 0%, #1a0f4a 100%); text-align: center;">
-                <div class="logo" style="height: 60px; margin-bottom: 20px;">
+                <div class="logo" style="height: 36px;margin-bottom: 0;">
                     <!--- dark --->
                     <img src="https://www.binaryinc.com.br/emails/logo-binary-dark-theme.png" alt="logo binary dark theme" width="119" height="35" class="dark-logo" />
                </div>
@@ -558,10 +558,10 @@ export async function SendContactEmails(email: string) {
 
                 <div class="social-icons" style="margin: 25px 0;">
                     <a href="https://linkedin.com/company/binaryinc" style="display: inline-block;width:40px;height:40px;margin:0 10px;border-radius:50%;background-color:#03e2ad;text-align:center;line-height: 56px;text-decoration:none">
-                        <img src="https://www.binaryinc.com.br/emails/linkedin-icon-white.png" alt="linkedin icon" />
+                        <img src="https://www.binaryinc.com.br/emails/linkedin-icon-white.png" alt="linkedin icon" width="25px" height="25px" />
                     </a>
                     <a href="https://instagram.com/binaryinc" style="display: inline-block;width:40px;height:40px;margin:0 10px;border-radius:50%;background-color:#03e2ad;text-align:center;line-height: 56px;text-decoration:none">
-                        <img src="https://www.binaryinc.com.br/emails/instagram-icon-white.png" alt="instagram icon" />
+                        <img src="https://www.binaryinc.com.br/emails/instagram-icon-white.png" alt="instagram icon" width="25px" height="25px" />
                     </a>
                 </div>
 
