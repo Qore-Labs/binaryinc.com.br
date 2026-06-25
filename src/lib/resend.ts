@@ -235,8 +235,6 @@ export async function SendContactEmails(email: string) {
                 <h1 style="font-size: 28px; font-weight: 600; margin-bottom: 15px; color: #12053c;">Novo contato recebido!</h1>
                 
                 <div class="divider" style="height: 3px; width: 50px; background-color: #03e2ad; margin-bottom: 30px;"></div>
-                
-                <p class="subtitle" style="font-size: 16px; color: #03e2ad; margin-bottom: 30px; font-weight: 500;">Cliente interessado nos nossos serviços</p>
 
                 <div class="message" style="font-size: 16px; line-height: 1.8; margin-bottom: 30px; color: #333333;">
                     <p>Olá time,</p>
@@ -244,7 +242,7 @@ export async function SendContactEmails(email: string) {
                     <p style="margin-top: 30px; font-size: 14px; color: #999999;">
                         <strong style="color: #12053c;">Email do cliente:</strong>
                     </p>
-                    <p style="margin-top: 8px; font-size: 18px; font-weight: 600; color: #03e2ad; word-break: break-all;">
+                    <p style="margin-top: 8px; font-size: 16px; font-weight: 600; color: #03e2ad; word-break: break-all;">
                         ${email}
                     </p>
                 </div>
