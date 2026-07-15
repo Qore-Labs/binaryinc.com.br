@@ -5,7 +5,7 @@ import { ContactFormType } from "@/schemas/contact";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 
-export const ContactForm = () => {
+export default function ContactForm() {
   const { handleSubmit, register, reset } = useForm<ContactFormType>();
 
   const [success, setSuccess] = useState(false);
@@ -68,4 +68,4 @@ export const ContactForm = () => {
       </form>
     </div>
   );
-};
+}

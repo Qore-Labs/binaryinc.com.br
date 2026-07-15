@@ -45,12 +45,19 @@
 
   --font-sans: var(--font-sans);
   --font-alt: var(--font-manrope);
+  --font-hanken-grotesk: var(--font-hanken-grotesk);
 
   --green: #03E2AD;
+  --green-02: #00D19D;
+  --white-02: #F9F6FB;
   --black: #282828;
+  --black-02: #1C1B1B;
   --gray: #5F5F5F;
   --gray-02: #ACACAC;
   --gray-03: #F4F7FA;
+  --gray-04: #47464F;
+  --gray-05: #E4E4E4;
+  --gray-06: #3B4A43;
   --blue: #473BF0;
   --dark-blue: #12053C;
   --dark-blue-02: #161546;
@@ -58,6 +65,7 @@
   --footer: #151419;
 
   --text-3xl: 2rem;
+  --text-6xl: 4.125rem;
 
   --max-xs: 390px;
 
@@ -143,6 +151,12 @@
   }
 }
 
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+  background-color: var(--dark-blue-02);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -187,9 +201,11 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

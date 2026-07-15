@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Hanken_Grotesk } from "next/font/google";
 
 import { SITE_CONFIG } from "@/utils/config/site";
 
@@ -17,6 +17,11 @@ const inter = Inter({
 
 const manrope = Manrope({
   variable: "--font-manrope",
+  subsets: ["latin"],
+});
+
+const hankenGrotesk = Hanken_Grotesk({
+  variable: "--font-hanken-grotesk",
   subsets: ["latin"],
 });
 
@@ -61,7 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${manrope.variable} h-full antialiased`}
+      className={`${inter.variable} ${manrope.variable} ${hankenGrotesk.variable} h-full antialiased`}
     >
       <ReactLenis root options={{ lerp: 0.08, smoothWheel: true }}>
         <body className="min-h-full flex flex-col">
