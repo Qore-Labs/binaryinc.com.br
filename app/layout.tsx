@@ -66,6 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
+      data-scroll-behavior="smooth"
       className={`${inter.variable} ${manrope.variable} ${hankenGrotesk.variable} h-full antialiased`}
     >
       <ReactLenis root options={{ lerp: 0.08, smoothWheel: true }}>

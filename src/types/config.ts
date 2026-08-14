@@ -2,17 +2,21 @@ import { Metadata } from "next";
 import { UrlObject } from "url";
 
 export interface ISocialMedia {
-    name: string;
-    url: string;
+  name: string;
+  url: string;
 }
 
 export interface ISiteConfig extends Metadata {
-    name: string;
-    baseUrl: string;
-    socialMedia?: ISocialMedia[];
+  name: string;
+  baseUrl: string;
+  socialMedia?: ISocialMedia[];
 }
 
 export interface IMenuItems {
-    name: string;
-    href: UrlObject["pathname"];
+  name: string;
+  href: UrlObject["pathname"];
+}
+
+export interface IMenuState {
+  isOpen: boolean;
 }
