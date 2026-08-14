@@ -207,12 +207,12 @@ export default async function About() {
               >
                 Fale com um de nossos especialistas
               </Link>
-              <Link
+              {/* <Link
                 href={{ pathname: "/cases" }}
                 className="text-white font-alt text-base font-normal relative flex flex-col items-center-safe justify-center-safe after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-white/20 after:-bottom-1 after:left-0"
               >
                 Ver nossos serviços
-              </Link>
+              </Link> */}
             </div>
           </section>
         </Container>
