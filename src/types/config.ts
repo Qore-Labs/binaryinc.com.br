@@ -15,6 +15,7 @@ export interface ISiteConfig extends Metadata {
 export interface IMenuItems {
   name: string;
   href: UrlObject["pathname"];
+  isEnabled?: boolean;
 }
 
 export interface IMenuState {

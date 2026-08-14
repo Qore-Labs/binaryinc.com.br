@@ -230,6 +230,23 @@ function Close(props: IIcons) {
   );
 }
 
+function ArrowLink(props: IIcons) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={props.width}
+      height={props.height}
+      viewBox="0 0 16 16"
+      fill="none"
+    >
+      <path
+        d="M12.175 9H0V7h12.175l-5.6-5.6L8 0l8 8-8 8-1.425-1.4 5.6-5.6z"
+        fill={props.fill}
+      />
+    </svg>
+  );
+}
+
 export const Icons = {
   Default: {
     Logo,
@@ -237,6 +254,7 @@ export const Icons = {
     ArrowRight,
     Menu,
     Close,
+    ArrowLink,
   },
   Social: {
     Instagram,
