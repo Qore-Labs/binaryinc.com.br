@@ -45,21 +45,27 @@ function Overlay() {
       </header>
       <nav className="w-full h-full pb-12 flex flex-col items-start justify-start gap-8 px-6">
         <ul className="flex gap-8 flex-col items-start justify-start">
-          {MenuItems.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={{ pathname: item.href }}
-                className={classNames(
-                  "text-base font-medium text-(--black) hover:text-(--green) transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-(--green) after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform",
-                  { "text-(--green) after:scale-x-100": pathname === item.href }
-                )}
-                aria-label={`Acesse - ${item.name}`}
-                onClick={() => setClose()}
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
+          {MenuItems.map((item) => {
+            if (!item.isEnabled) return null;
+            return (
+              <li key={item.href}>
+                <Link
+                  href={{ pathname: item.href }}
+                  className={classNames(
+                    "text-base font-medium text-(--black) hover:text-(--green) transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-(--green) after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform",
+                    {
+                      "text-(--green) after:scale-x-100":
+                        pathname === item.href,
+                    }
+                  )}
+                  aria-label={`Acesse - ${item.name}`}
+                  onClick={() => setClose()}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <Link
