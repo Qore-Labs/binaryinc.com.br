@@ -2,14 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Container from "@/components/UI/Container";
-import { CardsContent } from "@/utils/contents/cards";
-import { Card } from "@/components/Card";
-import { ContactForm } from "@/components/ContactForm";
-import { ValidateDevice } from "@/utils/device/is-mobile";
+import ContactForm from "@/components/ContactForm";
 import HeroArt from "@/components/Hero";
 import AboutUsSection from "@/components/Animated/AboutUsSection";
 import AnimatedImage from "@/components/Animated/AnimatedImage";
 import HeroContactFormAnimated from "@/components/ContactForm/HeroContactForm";
+
+import { ValidateDevice } from "@/utils/device/is-mobile";
+import ServiceCardSection from "@/components/Animated/ServiceCardSection";
 
 export default async function Home() {
   const isMobile = await ValidateDevice();
@@ -18,7 +18,7 @@ export default async function Home() {
     <main className="w-full">
       <section className="relative mt-6 mb-20 overflow-hidden">
         <Image
-          src="/home/bg-hero-bitmap.png"
+          src="/global/bg-bitmap.png"
           alt=""
           fill
           sizes="100vw"
@@ -109,18 +109,7 @@ export default async function Home() {
           </h3>
           <h4 className="text-xl text-(--gray)">Por que a BinaryInc?</h4>
 
-          <section className="mt-9 flex items-start justify-center gap-7 w-full max-lg:flex-col">
-            {CardsContent.map((card) => (
-              <Card.Root key={card.title}>
-                <Card.Title>{card.title}</Card.Title>
-                <Card.Content image={card.image} text={card.text} />
-                <Card.Button
-                  hasIcon={card.button.hasIcon}
-                  label={card.button.label}
-                />
-              </Card.Root>
-            ))}
-          </section>
+          <ServiceCardSection />
         </Container>
       </section>
 

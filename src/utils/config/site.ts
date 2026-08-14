@@ -22,7 +22,7 @@ export const SITE_CONFIG: ISiteConfig = {
 };
 
 export const MenuItems: IMenuItems[] = [
-  { name: "Home", href: "/" },
-  { name: "Quem somos", href: "/about" },
-  { name: "Cases", href: "/cases" },
+  { name: "Home", href: "/", isEnabled: true },
+  { name: "Quem somos", href: "/about", isEnabled: true },
+  { name: "Cases", href: "/cases", isEnabled: false },
 ];
